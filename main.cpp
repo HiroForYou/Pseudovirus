@@ -49,7 +49,7 @@ void countdown() {
 
     short m, s;
     
-    for(m = 1; m >= 0; m --) {
+    for(m = 0; m >= 0; m --) {
     	
     	for(s = 59; s >= 0; s--) {
     		
@@ -79,6 +79,10 @@ int main() {
 	Sleep(1250);
 	printf("\n    Preparando para reproducir el mensaje grabado...");
 	Sleep(1250);
+	printf("\n\n    Reproduciendo mensaje...");
+	Sleep(2500);
+	
+	system("cls");
 	
 	char soundfile1[] = "C:\warning.wav";
 	PlaySound((LPCSTR)soundfile1, NULL, SND_FILENAME | SND_ASYNC);
@@ -132,6 +136,9 @@ int main() {
     printf("\t\t\t   888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888\n");
     printf("\t\t\t   888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888\n");
     
+    Sleep(60250);
+    system("cls");
+    
 	printf("\n\n");
 	printf("\033[1;32m");
 	
@@ -151,8 +158,6 @@ int main() {
 	printf("\n");
 	printf("\t\t\t   888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888\n");
 	
-	Sleep(40000);
-	
 	printf("\n\n");
 	
 	countdown();
@@ -160,15 +165,15 @@ int main() {
     char soundfile[] = "C:\song.wav";
 	PlaySound((LPCSTR)soundfile, NULL, SND_FILENAME | SND_ASYNC);
 	
-	Sleep(3750);
+	Sleep(4750);
     
+    printf("\033[1;31m");
 	printf("\n\n");
 	list_dir("C:/Program Files/");
 	printf("\n\n  ");
 	
-	printf("  Jajajaja, te la cre%cste we...\n", 161);
-	printf("\n\n  ");
-	
+	printf("\033[1;32m");
+	printf("  Jajajaja, te la cre%cste we...\n  ", 161);	
 	system("pause");
 	
 	return 0;
